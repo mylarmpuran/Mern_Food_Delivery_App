@@ -1,5 +1,9 @@
 const { app } = require(".");
+const connectDB = require("./config/db.js");
 
-app.listen(5454, async() => {
-    console.log("server is running on port 5454")
+const PORT=5454
+
+app.listen(PORT, async() => {
+    await connectDB()
+    console.log("server is running on port" +" "+ PORT)
 })
