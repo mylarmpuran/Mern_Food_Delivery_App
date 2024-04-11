@@ -1,6 +1,6 @@
-const userService = require("./service/userService.js");
-const { generateToken } = require ("./config/jwtprovider");
-const bcrypt = require(bcrypt)
+const userService = require("../services/userService.js");
+const { generateToken } = require ("../config/jwtprovider");
+const bcrypt = require('bcrypt')
 
 
 const register = async(req,res) => {
