@@ -1,0 +1,31 @@
+const mongoose = require('mongoose');
+
+const FoodSchema = new mongoose.Schema({
+    name:String,
+    description:String,
+    price:Numebr,
+    foodCategory:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Category',
+    },
+    images:[String],
+    available:Boolean,
+    restauratn:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Restaurant',
+    },
+    isVegetarian:Boolean,
+    isSeasonl:Boolean,
+    ingredients:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'IngredientsItem',
+    }],
+    creationDate:{
+        type:Date,
+        default:Date.now,
+    },
+});
+
+const Food = mongoose.model('Food',FoodSchema);
+
+module.exports=Food;

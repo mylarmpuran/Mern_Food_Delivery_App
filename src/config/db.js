@@ -1,6 +1,6 @@
-const { mongoose } = require("mongoose")
+const { mongoose } = require("mongoose");
 
- const mongodbUrl = "mongodb://localhost:27017/Food-Ordering-App"
+ const mongodbUrl = "mongodb://localhost:27017/Food-Ordering-App";
 
 
  async function connectDB(){

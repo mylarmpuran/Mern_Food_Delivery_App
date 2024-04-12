@@ -4,8 +4,11 @@ const bcrypt = require('bcrypt')
 
 
 const register = async(req,res) => {
+    let userData = req.body;
+    
     try {
-        const user = await userService.createUser(req.body);
+        const user = await userService.creatUser(userData);
+        console.log(typeof user)
         const jwt = generateToken(user._id);
         return res.status(201).send({jwt,message:"register success"})
     } catch (error) {
@@ -19,7 +22,7 @@ const login = async(req,res)=>{
     try {
         const user = await userService.getUserByEmail(email);
 
-        const isPasswordmatch = bcrypt.compare(password,user.password);
+        const isPasswordmatch = await bcrypt.compare(password,user.password);
 
         if(!isPasswordmatch){
             return res.status(401).send({message:"invalid password"});

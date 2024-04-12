@@ -1,9 +1,11 @@
 const { getUserIdFromToken } = require("../config/jwtprovider");
 const User = require("../models/user.model");
+const bcrypt = require('bcrypt')
 
 const creatUser = async (userData) => {
+  
   try {
-    const { fullName, email, password, role } = userData;
+    let {fullName, email, password, role } = userData;
     const isuserExist = await User.findOne({ email: email });
 
     if (isuserExist) {
@@ -13,13 +15,18 @@ const creatUser = async (userData) => {
     password = await bcrypt.hash(password, 8);
 
     const user = new User({
-      fullName: firstName,
+      fullName: fullName,
       email: email,
       password: password,
       role,
     });
 
+    console.log("Model",user)
     await user.save();
+    return user;
+
+
+    
   } catch (error) {
     throw new Error(error.message);
   }
@@ -70,3 +77,4 @@ const findAllUsers = async () => {
     }
 }
 
+module.exports = {creatUser,getUserByEmail,findUserById,findUserProfileByjwt,findAllUsers}

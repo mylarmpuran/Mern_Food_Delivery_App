@@ -8,14 +8,12 @@ const register = require("./routes/authRoutes.js");
 
 const app = express();
 
-
-app.use("/", homeRouter)
-app.use('/auth',register);
-
-
-
 app.use(cors());
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use("/", homeRouter)
+app.use('/auth',register);
 
 module.exports = { app };
