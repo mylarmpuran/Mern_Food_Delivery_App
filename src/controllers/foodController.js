@@ -1,4 +1,4 @@
-const foodService = require('../services/foodService.js');
+const foodService = require('../services/food.service.js');
 const restaurantService = require('../services/RestaurantService.js');
 const userService = require('../services/user.service.js');
 
