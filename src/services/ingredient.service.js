@@ -126,3 +126,6 @@ const updateStoke = async(id) => {
         )
     }
 }
+
+
+module.exports = {createIngredientsCategory, findIngredientsCategorById, findIngredientsCategoryByRestaurantId, findRestaurantsIngredients, createIngredientsItem, updateStoke}

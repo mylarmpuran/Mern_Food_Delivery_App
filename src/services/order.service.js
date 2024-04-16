@@ -1,15 +1,18 @@
-
+const Address = require('../models/address.model.js');
+const OrderItem = require('../models/orderItem.model.js')
+const Restaurant = require('../models/restaurant.model.js')
+const Order = require('../models/order.model.js')
 
 const createOrder = async(order, user) => {
     try {
         const address = order.deliveryAddress;
         let savedAddress;
         if(address._id){
-            const isAddressExist = await address.findById(address._id);
+            const isAddressExist = await Address.findById(address._id);
             if(isAddressExist){
                 savedAddress = isAddressExist;
             }else {
-                const shippingAddress = new address(order.deliveryAddress);
+                const shippingAddress = new Address(order.deliveryAddress);
                 savedAddress = await shippingAddress.save();
             }
         }
@@ -149,3 +152,5 @@ const updateOrder = async(orderId, orderStatus) => {
         );
     }
 }
+
+module.exports = {createOrder, cancelOrder, findOrderById,getUserOrders,getOrdersOfRestaurant,updateOrder }

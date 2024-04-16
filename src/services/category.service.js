@@ -37,3 +37,6 @@ const findCategoryById =async(categoryId) => {
         throw new Error(`Failed to find categories for restaurant ID ${categoryId}`)
     }
 }
+
+
+module.exports = {createCategory, findCategoryByRestaurantId, findCategoryById}

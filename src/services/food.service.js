@@ -113,3 +113,5 @@ const findFoodById = async(foodId){
         );
     }
 };
+
+module.exports = { createFood, deleteFood, getRestaurantFood, searchFood, updateAvailibilityStatus, findFoodById}

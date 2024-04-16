@@ -1,5 +1,5 @@
 const userService = require("../services/userService.js");
-const { generateToken } = require ("../config/jwtprovider");
+const { generateToken } = require ("../config/jwtprovider.js");
 const bcrypt = require('bcrypt')
 
 

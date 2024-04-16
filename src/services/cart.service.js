@@ -127,3 +127,5 @@ const calculateCartTotals= async(cart) => {
     }
 };
 
+
+module.exports = { createCart, findCartByUserId, addItemToCart, updateCartItemQuant, removeItemFromCart, clearCart, calculateCartTotals}

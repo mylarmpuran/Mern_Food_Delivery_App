@@ -136,3 +136,5 @@ const updateRestaurantStatus = async(id)=> {
         throw new Error(error.message);
     }
 }
+
+module.exports = { createRestaurant, findRestaurantById, deleteRestaurant, getRestaurantByUserId, searchRestaurant, addToFavorite, getAllRestaurants, updateRestaurantStatus}
