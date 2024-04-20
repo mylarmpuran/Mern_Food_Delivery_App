@@ -39,4 +39,4 @@ const findCategoryById =async(categoryId) => {
 }
 
 
-module.exports = {createCategory, findCategoryByRestaurantId, findCategoryById}
+module.exports = {createCategory, findCategoryByRestaurnatId, findCategoryById}

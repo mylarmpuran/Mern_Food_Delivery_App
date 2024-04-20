@@ -91,4 +91,4 @@ const updateAvilibalityStatus = async(req, res) =>  {
 }
 }
 
-model.exports = {searchFood,getMenuItemByRestaurantId,createItem,deleteItem,getMenuItemByName,updateAvilibalityStatus}
+module.exports = {searchFood,getMenuItemByRestaurantId,createItem,deleteItem,getMenuItemByName,updateAvilibalityStatus}

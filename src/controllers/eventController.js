@@ -53,4 +53,4 @@ const deleteEvents = async(req, res) => {
     }
 }
 
-model.exports = {createEvents,findAllEvents,findRestaurantEvents,deleteEvents}
+module.exports = {createEvents,findAllEvents,findRestaurantEvents,deleteEvents}

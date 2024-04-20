@@ -4,8 +4,7 @@ const bcrypt = require('bcrypt')
 
 
 const register = async(req,res) => {
-    let userData = req.body;
-    
+    let userData = req.body;    
     try {
         const user = await userService.creatUser(userData);
         console.log(typeof user)
@@ -17,7 +16,7 @@ const register = async(req,res) => {
 }
 
 
-const login = async(req,res)=>{
+const login = async(req,res) => {
     const {password,email} = req.body;
     try {
         const user = await userService.getUserByEmail(email);

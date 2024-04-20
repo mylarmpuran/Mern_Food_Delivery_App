@@ -60,4 +60,4 @@ const restaurantIngredientCategory = async(req, res) => {
     }
 }
 
-model.exports = { createIngredientsCategory,createIngredient,updateStoke,restaurantIngredients,restaurantIngredientCategory}
+module.exports = { createIngredientsCategory,createIngredient,updateStoke,restaurantIngredients,restaurantIngredientCategory}

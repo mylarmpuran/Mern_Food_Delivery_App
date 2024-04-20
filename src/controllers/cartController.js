@@ -16,7 +16,7 @@ const addItemToCart = async(req, res) => {
             res.status(500).json({ error: "Internal server error "});
         }
     }
-}
+};
 
 const updateCartItemQuantity = async(req, res) => {
     try {
@@ -105,4 +105,4 @@ const clearCart = async(req,res) => {
     }
 }
 
-model.exports = {addItemToCart,updateCartItemQuantity,removeItemFromCart,calculateCartTotals,findUserCart,clearCart}
+module.exports = {addItemToCart,updateCartItemQuantity,removeItemFromCart,calculateCartTotals,findUserCart,clearCart}

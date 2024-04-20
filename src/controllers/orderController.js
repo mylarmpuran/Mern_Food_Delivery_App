@@ -80,4 +80,4 @@ const updateOrder = async(req, res) => {
     }
 }
 
-model.exports = {createOrder,getAllUserOrders,deleteOrder,getAllRestaurantOrders,updateOrder}
+module.exports = {createOrder,getAllUserOrders,deleteOrder,getAllRestaurantOrders,updateOrder}

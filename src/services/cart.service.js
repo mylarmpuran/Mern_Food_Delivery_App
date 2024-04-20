@@ -76,7 +76,7 @@ const addItemToCart = async(req, userId) => {
     return isPresent;
 }
 
-const updateCartItemQuant = async(cartItemId, quantity) => {
+const updateCartItemQuantity = async(cartItemId, quantity) => {
     const cartItem = await CartItem.findById(cartItemId).populate([
         { path:"food", populate: {path: "restaurant", select:"_id"}},
     ]);
@@ -128,4 +128,4 @@ const calculateCartTotals= async(cart) => {
 };
 
 
-module.exports = { createCart, findCartByUserId, addItemToCart, updateCartItemQuant, removeItemFromCart, clearCart, calculateCartTotals}
+module.exports = { createCart, findCartByUserId, addItemToCart, updateCartItemQuantity, removeItemFromCart, clearCart, calculateCartTotals}

@@ -34,4 +34,4 @@ const getRestaurantsCategory = async(req, res) => {
 }
 
 
-model.exports = {createCategory, getRestaurantsCategory}
+module.exports = {createCategory, getRestaurantsCategory}
