@@ -59,3 +59,5 @@ const restaurantIngredientCategory = async(req, res) => {
         res.status(500).json({ error: "Internal server error" })
     }
 }
+
+model.exports = { createIngredientsCategory,createIngredient,updateStoke,restaurantIngredients,restaurantIngredientCategory}

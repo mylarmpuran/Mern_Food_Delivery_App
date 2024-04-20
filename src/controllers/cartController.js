@@ -104,3 +104,5 @@ const clearCart = async(req,res) => {
         }
     }
 }
+
+model.exports = {addItemToCart,updateCartItemQuantity,removeItemFromCart,calculateCartTotals,findUserCart,clearCart}

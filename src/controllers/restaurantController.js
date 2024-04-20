@@ -95,3 +95,6 @@ const addToFavorite = async (req, res) => {
     }
   }
 };
+
+
+model.exports = { createRestaurant,deleteRestaurant,updateRestaurantStatus,findRestaurantById,findRestaurantByName,getAllRestaurants,addToFavorite }

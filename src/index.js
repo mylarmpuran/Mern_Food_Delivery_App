@@ -18,4 +18,4 @@ app.use("/", homeRouter)
 app.use('/auth',register);
 app.use('/api/users',userRoutes);
 
-module.exports = { app };
+module.exports = {app};

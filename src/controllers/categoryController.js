@@ -32,3 +32,6 @@ const getRestaurantsCategory = async(req, res) => {
         }
     }
 }
+
+
+model.exports = {createCategory, getRestaurantsCategory}

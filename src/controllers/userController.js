@@ -15,3 +15,5 @@ const getUserProfileHandler = async(req, res) => {
         }
     }
 }
+
+model.exports = getUserProfileHandler;

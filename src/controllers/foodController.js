@@ -90,3 +90,5 @@ const updateAvilibalityStatus = async(req, res) =>  {
     }
 }
 }
+
+model.exports = {searchFood,getMenuItemByRestaurantId,createItem,deleteItem,getMenuItemByName,updateAvilibalityStatus}

@@ -1,4 +1,4 @@
-const {getUserIdFromToken} = require('../config/jwtProvider.js')
+const {getUserIdFromToken} = require('../config/jwtprovider.js')
 const userService = require('../services/userService.js')
 
 const authenticate = async(req,res,next) => {

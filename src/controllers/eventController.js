@@ -52,3 +52,5 @@ const deleteEvents = async(req, res) => {
         res.status(500).json({error: "Internal server error "});
     }
 }
+
+model.exports = {createEvents,findAllEvents,findRestaurantEvents,deleteEvents}
