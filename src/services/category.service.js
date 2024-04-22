@@ -1,4 +1,4 @@
-const Category = require('../models/categroty.model.js');
+const Category = require('../models/category.model.js');
 const Restaurant = require("../models/restaurant.model.js");
 
 

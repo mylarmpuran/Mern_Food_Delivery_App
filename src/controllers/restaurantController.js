@@ -10,12 +10,12 @@ const createRestaurant = async (req, res) => {
   }
 };
 
-const deleteRestaurant = async (req, res) => {
+const deleteRestaurantById = async (req, res) => {
   try {
     const { id } = req.params;
     const { jwt } = req.body;
     const user = await userService.findUserProfileByjwt(jwt);
-    await RestaurantService.deleteRestaurant(id);
+    await RestaurantService.deleteRestaurantById(id);
     res.status(200).json({
       message: "Restaurant Deleted with Id successfully",
       success: true,
@@ -47,7 +47,7 @@ const updateRestaurantStatus = async (req, res) => {
   }
 };
 
-const findRestaurantById = async (req, res) => {
+const findRestaurantByUserId = async (req, res) => {
   try {
     const { id } = req.params;
     const user = req.user;
@@ -97,4 +97,4 @@ const addToFavorite = async (req, res) => {
 };
 
 
-module.exports = { createRestaurant,deleteRestaurant,updateRestaurantStatus,findRestaurantById,findRestaurantByName,getAllRestaurants,addToFavorite }
+module.exports = { createRestaurant,deleteRestaurantById,updateRestaurantStatus,findRestaurantByUserId,findRestaurantByName,getAllRestaurants,addToFavorite }

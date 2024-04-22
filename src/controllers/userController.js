@@ -16,4 +16,4 @@ const getUserProfileHandler = async(req, res) => {
     }
 };
 
-module.exports = getUserProfileHandler;
+module.exports = {getUserProfileHandler};

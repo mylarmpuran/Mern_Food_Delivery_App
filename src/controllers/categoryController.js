@@ -1,5 +1,5 @@
 const categoryService = require('../services/category.service.js');
-const userService = require('../services/user.service.js');
+const userService = require('../services/userService.js');
 
 const createCategory = async(req, res) => {
         try {
@@ -22,7 +22,7 @@ const getRestaurantsCategory = async(req, res) => {
         const { id } = req.params;
 
         const user = req.user;
-        const categories = await categoryService.findCategoryByRestaurantId(id);
+        const categories = await categoryService.findCategoryByRestaurnatId(id);
         res.status(200).json(categories);
     } catch (error) {
         if (error instanceof Error) {

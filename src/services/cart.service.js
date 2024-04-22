@@ -1,5 +1,5 @@
 const Cart = require('../models/cart.model.js');
-const CartItem = require('../models/cartItem.js');
+const CartItem = require('../models/cartItem.model.js');
 const Food = require('../models/food.model.js');
 
 

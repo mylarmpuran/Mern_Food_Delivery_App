@@ -100,7 +100,7 @@ const updateAvailibilityStatus = async(foodId) => {
     }
 }
 
-const findFoodById = async(foodId){
+const findFoodById = async(foodId) => {
     try{
         const food = await Food.findById(foodId);
         if(!food){

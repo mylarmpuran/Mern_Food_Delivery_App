@@ -34,7 +34,7 @@ const createRestaurant = async(req,user) => {
     }
 }
 
-const findRestaurantById =async(restaurantId)=>{
+const findRestaurantById =async(restaurantId)=> {
     try{
         const restaurant=await Restaurant.findById(restaurantId);
         if(!restaurant) throw new Error("restaurant not found");
@@ -44,7 +44,7 @@ const findRestaurantById =async(restaurantId)=>{
     }
 };
 
-const deleteRestaurant= async (restaurantId) => {
+const deleteRestaurantById= async (restaurantId) => {
     try {
         this.findRestaurantById(restaurantId);
         const restaurant=await Restaurant.deleteById(restaurantId);
@@ -67,7 +67,7 @@ const getRestaurantByUserId = async(userId) => {
 };
 
 
-const searchRestaurant = async(keyword) =>{
+const searchRestaurant = async(keyword) => {
     try{
         const restaurants  = await Restaurant.find({
             $or:[
@@ -83,7 +83,7 @@ const searchRestaurant = async(keyword) =>{
 }
 };
 
-const addToFavorite = async(restaurantId, user){
+const addToFavorite = async(restaurantId, user) => {
     try {
         const restaurant = this.findRestaurantById(restaurantId);
 
@@ -137,4 +137,4 @@ const updateRestaurantStatus = async(id)=> {
     }
 }
 
-module.exports = { createRestaurant, findRestaurantById, deleteRestaurant, getRestaurantByUserId, searchRestaurant, addToFavorite, getAllRestaurants, updateRestaurantStatus}
+module.exports = { createRestaurant, findRestaurantById, deleteRestaurantById, getRestaurantByUserId, searchRestaurant, addToFavorite, getAllRestaurants, updateRestaurantStatus}

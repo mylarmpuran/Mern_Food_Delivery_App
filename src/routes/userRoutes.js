@@ -1,9 +1,9 @@
 const express = require('express');
-const getUserProfileHandler = require('../controllers/userController.js');
+const userController = require('../controllers/userController.js')
 const authenticate = require('../middleware/authenticate.js')
 const router = express.Router();
 
-router.get('/profile',authenticate,getUserProfileHandler);
-console.log(typeof getUserProfileHandler)
+router.get('/profile',authenticate, userController.getUserProfileHandler);
+
 
 module.exports = router;

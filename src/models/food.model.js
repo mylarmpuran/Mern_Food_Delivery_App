@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const FoodSchema = new mongoose.Schema({
     name:String,
     description:String,
-    price:Numebr,
+    price:Number,
     foodCategory:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Category',

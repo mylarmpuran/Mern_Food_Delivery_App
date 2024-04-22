@@ -46,7 +46,7 @@ const getUserByEmail = async (email) => {
 
 const findUserById = async (userId) => {
   try {
-    const user = await User.findById(userId).populate("addresses");
+    const user = await User.findById(userId);
     if (!user) {
       throw new Error("User not found");
     }
@@ -58,7 +58,7 @@ const findUserById = async (userId) => {
 const findUserProfileByjwt = async (jwt) => {
     try {
         const userId = getUserIdFromToken(jwt);
-        const user = await User.findUserById(userId);
+        const user = await User.findById(userId);
 
         return user;
 

@@ -1,6 +1,6 @@
 const foodService = require('../services/food.service.js');
 const restaurantService = require('../services/RestaurantService.js');
-const userService = require('../services/user.service.js');
+const userService = require('../services/userService.js');
 
 const searchFood = async(req,res)=> {
     try {
@@ -32,7 +32,7 @@ const getMenuItemByRestaurantId = async(req, res) => {
             res.status(500).json({error: "Internal server error"});
         }
     }
-}
+};
 
 const createItem = async(req,res) => {
     try {
